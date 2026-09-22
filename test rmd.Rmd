@@ -1,7 +1,28 @@
 ---
 title: "test rmd"
-output: html_document
+author: "Katie Danyk"
+output: pdf_document
 date: "2026-09-22"
 ---
 
-testing
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This report documents my first attempts of using Git and GitHub to version control on RStudio project. I will be modifying this report, staging and committing changes and then pushing them to GitHub
+
+Let's create a test plot of distance (miles) and speed (mph)
+
+```{r, test-plot}
+plot(cars, col = "red", xlab = "speed (mph)", ylab = "distance (miles)")
+```
+
+A summary of the data frame is given below
+
+```{r}
+library(knitr)
+kable(summary(cars))
+```
+
+
+
